@@ -12,9 +12,13 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 
 public class MainActivity extends ActionBarActivity {
@@ -73,13 +77,13 @@ public class MainActivity extends ActionBarActivity {
                     "Thurs - Rainy - 64/51",
                     "Fri - Foggy - 70/46",
                     "Sat - Sunny - 76/68",
-                    "Sun - Hurrican - 52/15"
+                    "Sun - Hurricane - 52/15"
             };
 
-            List<String> weekForecast = new Arraylist<String>(
+            List<String> weekForecast = new ArrayList<String>(
                     Arrays.asList(forecastArray));
 
-            mForecastAdapter = new ArrayAdapter<String>(
+            ArrayAdapter<String> mForecastAdapter = new ArrayAdapter<String>(
                     getActivity(),
                     R.layout.list_item_forecast,
                     R.id.list_item_forecast_textview,
